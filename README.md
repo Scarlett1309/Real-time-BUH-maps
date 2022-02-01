@@ -7,8 +7,8 @@ We can build the application by using the following stack: Python + Flask, Kafka
 
 1. Create the data by generating a couple of routes through www.geojson.io, and save the generated results as .json files.
 2. Start Zookeeper and Kafka, by following the commands from [0] (of course, after downloading Kafka from Apache). 
-3. Create a testing topic (see the command at [0]. And afterwards start the producer in Python. 
-4. Parse the each json, by selecting only the key-value pair coordinates: [long, lat].
+3. Create a testing topic (see the command at [0]). And afterwards start the producer in Python. 
+4. Parse each json, by selecting only the key-value pair coordinates: [long, lat].
 5. Afterwards, dump the data collected from all the json files into a dictionary that retains the id of the vehicle, a timestamp, and also the coordinates of their routes. 
 6. While you're dumping the data, you also need to publish it. Once a vehicle reaches the final coordinates of their route, it goes back to where their route started. 
 7. With Flask, create an app.py where you're going to render an index file, and also a Consumer.
